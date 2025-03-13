@@ -2,7 +2,7 @@ from random import randint
 
 def draw_letters():
     pass
-
+#Comment added just to practice push it to GitHub
 def uses_available_letters(word, letter_bank):
     pass
 
