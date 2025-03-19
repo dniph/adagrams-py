@@ -49,7 +49,14 @@ def draw_letters():
     
 #Comment added just to practice push it to GitHub
 def uses_available_letters(word, letter_bank):
-    pass
+    available_letters = letter_bank[:]
+    word = word.upper()
+    for letter in word: 
+        if letter in available_letters:
+            available_letters.remove(letter)
+        else:
+            return False
+    return True
 
 def score_word(word):
     pass
