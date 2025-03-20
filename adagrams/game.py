@@ -32,18 +32,17 @@ LETTER_POOL = {
 
 
 def draw_letters():
-    letters_list = list(LETTER_POOL.keys())
+    letter_pool = LETTER_POOL.copy()
+    letters_list = list(letter_pool.keys())
     draw_letters_list = []
     
     while len(draw_letters_list) < 10:
         letter_index = randint(0, len(letters_list) -1)
         letter = letters_list[letter_index]
-        if LETTER_POOL[letter] > 0:
+        if letter_pool[letter] > 0:
             draw_letters_list.append(letter)
-            LETTER_POOL[letter] -= 1
+            letter_pool[letter] -= 1
     
-    for letter in draw_letters_list:
-        LETTER_POOL[letter] += 1
     
     return draw_letters_list
     
